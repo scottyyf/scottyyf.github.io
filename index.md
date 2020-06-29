@@ -1,2 +1,2 @@
 ## Hello China trump
-[more](more.md)
+[more](site/more.md)
