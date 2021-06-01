@@ -4,4 +4,4 @@
 * [爬楼梯](leetcode_climb_stairs.md)
 * [两数之和](leetcode_two_sum.md)
 * [三数之和](leetcode_three_sum.md)
-* [反转链表](leetcode_reverse_linked_list)
+* [反转链表](leetcode_reverse_linked_list.md)
