@@ -34,6 +34,25 @@ class Solution:
         return dp[n]
 ```
 
+正儿八经的动态规划
+```python
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        ret_list = {}
+        return self.climb(n, ret_list)
+
+    def climb(self, n, ret: dict):
+        if n < 3:
+            return n
+
+        if n in ret:
+            return ret[n]
+
+        ret[n] = self.climb(n - 1, ret) + self.climb(n - 2, ret)
+        return ret[n]
+```
+
+
 还有一钟方法，找重复性。从小到大，找他的通项公式
 ```python
 class Solution:
