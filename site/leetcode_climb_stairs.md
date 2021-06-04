@@ -68,3 +68,40 @@ class Solution:
 
         return right
 ```
+
+> **_NOTE:_**  如果可以走三步，那么函数是怎样的
+
+```python
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        dp = {0: 0, 1: 1, 2: 2, 3: 4}
+        for stair in range(4, n + 1):
+            dp[stair] = dp[stair - 1] + dp[stair - 2] + dp[stair - 3]
+
+        return dp[n]
+```
+
+> **_NOTE:_**  如果相邻两步不能相同又是怎样的呢
+
+相邻两步不能相同。上一步骤的状态可用二维数据的二维记录。如dp[n][1] 表示爬n阶时，走的是一部，那么dp[n-1]时就只能dp[n-1][2]和dp[n-1][3]
+```python
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        # dp = {0: 0, 1: 1, 2: 2, 3: 3}
+        dp = [[0] * 4 for _ in range(n + 1)]
+        dp[1][1] = 1
+        dp[2][2] = 1
+        dp[3][1] = 1
+        dp[3][2] = 1
+        dp[3][3] = 1
+        for stair in range(4, n + 1):
+            if stair > 1:
+                dp[stair][1] = dp[stair - 1][2] + dp[stair - 1][3]
+            if stair > 2:
+                dp[stair][2] = dp[stair - 2][1] + dp[stair - 2][3]
+            if stair > 3:
+                dp[stair][3] = dp[stair - 3][1] + dp[stair - 3][2]
+
+        return dp[n][1] + dp[n][2] + dp[n][3]
+```
+
