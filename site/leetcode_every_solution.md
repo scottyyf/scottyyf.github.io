@@ -13,3 +13,4 @@
 
 * [几种dp可用的题](leetcode_coin_change.md)
 * [不同路径](leetcode_diffirent_path.md)
+* [最长公共子序列](leetcode_longest_common_subsequence.md)
