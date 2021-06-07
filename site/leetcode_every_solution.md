@@ -14,3 +14,6 @@
 * [几种dp可用的题](leetcode_coin_change.md)
 * [不同路径](leetcode_diffirent_path.md)
 * [最长公共子序列](leetcode_longest_common_subsequence.md)
+* [三角形最小路径和](leetcode_triangle.md)
+* [最大子序和](leetcode_max_subarray.md)
+* [乘积最大子序和](leetcode_max_product_subarray.md)
