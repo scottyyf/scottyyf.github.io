@@ -17,3 +17,8 @@
 * [三角形最小路径和](leetcode_triangle.md)
 * [最大子序和](leetcode_max_subarray.md)
 * [乘积最大子序和](leetcode_max_product_subarray.md)
+* [打家劫舍](leetcode_rob.md)
+
+* [子集](leetcode_zi_ji.md)
+* [多数元素](leetcode_majority_element.md)
+* [电话号码的字母组合](leetcode_combination_phone.md)
