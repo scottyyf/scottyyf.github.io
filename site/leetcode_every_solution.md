@@ -22,3 +22,4 @@
 * [子集](leetcode_zi_ji.md)
 * [多数元素](leetcode_majority_element.md)
 * [电话号码的字母组合](leetcode_combination_phone.md)
+* [N皇后](leetcode_n_queens.md)
