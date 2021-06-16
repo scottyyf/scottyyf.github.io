@@ -23,3 +23,6 @@
 * [多数元素](leetcode_majority_element.md)
 * [电话号码的字母组合](leetcode_combination_phone.md)
 * [N皇后](leetcode_n_queens.md)
+
+* [有效的数独](leetcode_valid_sudoku.md)
+* [解数独](leetcode_sudoku_solver.md)
