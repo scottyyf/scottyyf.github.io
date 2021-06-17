@@ -28,3 +28,4 @@
 * [解数独](leetcode_sudoku_solver.md)
 * [单词接龙](leetcode_word_ladder.md)
 * [最小基因变化](leetcode_mini_mutation.md)
+* [二进制矩阵中的最短路劲](leetcode_shortest_path_in_binary.md)
