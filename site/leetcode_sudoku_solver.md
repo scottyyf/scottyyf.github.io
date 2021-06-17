@@ -48,7 +48,7 @@ class Solution:
 ```
 
 
-别人写的和N皇后类似结构的代码
+别人写的和N皇后类似结构的代码.
 ```python
 class Solution:
     def solveSudoku(self, board: List[List[str]]) -> None:
