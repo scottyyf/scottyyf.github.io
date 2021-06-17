@@ -27,3 +27,4 @@
 * [有效的数独](leetcode_valid_sudoku.md)
 * [解数独](leetcode_sudoku_solver.md)
 * [单词接龙](leetcode_word_ladder.md)
+* [最小基因变化](leetcode_mini_mutation.md)
