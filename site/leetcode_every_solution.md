@@ -29,3 +29,6 @@
 * [单词接龙](leetcode_word_ladder.md)
 * [最小基因变化](leetcode_mini_mutation.md)
 * [二进制矩阵中的最短路劲](leetcode_shortest_path_in_binary.md)
+* [滑动谜题](leetcode_sliding_puzzle.md)
+
+* [实现字典树](leetcode_impl_trie.md)
