@@ -24,6 +24,7 @@
 * [电话号码的字母组合](leetcode_combination_phone.md)
 * [N皇后](leetcode_n_queens.md)
 
+* [岛屿问题](leetcode_islands_num.md)
 * [有效的数独](leetcode_valid_sudoku.md)
 * [解数独](leetcode_sudoku_solver.md)
 * [单词接龙](leetcode_word_ladder.md)
