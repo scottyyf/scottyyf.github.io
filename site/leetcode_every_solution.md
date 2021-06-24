@@ -34,3 +34,7 @@
 
 * [实现字典树](leetcode_impl_trie.md)
 * [单词搜索](leetcode_word_search_ii.md)
+* [朋友圈问题](leetcode_friend_circle.md)
+
+* [1的个数](leetcode_num_of_1.md)
+* [2的幂](leetcode_power_if_2.md)
