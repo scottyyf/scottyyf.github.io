@@ -46,3 +46,38 @@ class bubble_sort(s: list) -> list:
 
     return s
 ```
+
+
+# 时间复杂度
+O(nlogn)
+
+### 快速排序
+
+通过pivot将列表分成左边小于pivot，右边大于pivot，然后递归调用这个逻辑。完成排序
+
+```python
+class QuickSort:
+    def sort(self, nums: list) -> list:
+        self.quick_sort(nums, 0, len(nums)-1) # 0 to n-1
+        return nums
+
+    def quick_sort(self, nums, begin, end): # end 这里是正确的index
+        if begin >= end:
+            return
+
+        pivot = self.partition(nums, begin, end)
+        self.quick_sort(nums, begin, pivot-1)
+        self.quick_sort(nums, pivot+1, end)
+
+    def partition(self, nums, begin, end) -> int:
+        pivot = nums[begin]
+        mark = begin
+        for i in range(begin+1, end+1): # i需要到end这个数，所以range中需要end+1
+            if nums[i] < pivot:
+                mark += 1
+                nums[mark], nums[i] = nums[i], nums[mark]
+
+        nums[begin], nums[mark] = nums[mark], nums[begin]
+        return mark
+```
+
