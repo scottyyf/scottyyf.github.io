@@ -38,3 +38,5 @@
 
 * [1的个数](leetcode_num_of_1.md)
 * [2的幂](leetcode_power_if_2.md)
+
+* [翻转对](leetcode_reverse_pairs.md)

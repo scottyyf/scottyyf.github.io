@@ -55,6 +55,8 @@ O(nlogn)
 
 通过pivot将列表分成左边小于pivot，右边大于pivot，然后递归调用这个逻辑。完成排序
 
+> **_NOTE:_** 以行首为标杆，将大小分为右左两边。这样一直执行，当只有两个元素的时候，开始有序，并在归的时候慢慢向上有序操作
+
 ```python
 class QuickSort:
     def sort(self, nums: list) -> list:
@@ -80,4 +82,65 @@ class QuickSort:
         nums[begin], nums[mark] = nums[mark], nums[begin]
         return mark
 ```
+
+### 归并排序
+
+> **_NOTE:_** 先一分为二，这样一直分，一直分，分到只有两个值的时候，开始合并，这个合并操作会一直向上重复刚刚一分为二的路径
+
+```python
+class MergeSort:
+    def merge(self, nums:list):
+        self.merge_sort(nums, 0, len(nums)-1)
+        return nums
+
+    def merge_sort(self, nums: list, left: int, right: int):
+        mid = (left + right) >> 1
+        self.merge_sort(nums, left, mid)
+        self.merge_sort(nums, mid+1, right)
+        self.merge(nums, left, mid, right)
+
+    def merge(self, nums, left, mid, right):
+        temp = []
+        i = left
+        j = mid + 1
+
+        while i <= mid and j <= right:
+            if nums[i] < nums[j]:
+                temp.append(nums[i])
+                i += 1
+            else:
+                temp.append(nums[j])
+                j += 1
+
+        while i <= mid:
+            temp.append(nums[i])
+            i += 1
+
+        while j <= right:
+            temp.append(nums[j])
+            j += 1
+
+        nums[left: right+1] = temp
+```
+
+### 堆排序
+
+这里先用heapq自带的小顶堆
+```python
+class HeadqSort:
+    def sort(self, nums: list) -> list:
+        headq.heapify(nums)
+        
+        temp = []
+        length = len(nums)
+        for i in range(length):
+            temp.append(headq.heappop(nums)
+
+        return temp
+```
+
+
+# 特殊排序
+O(n)
+
 
