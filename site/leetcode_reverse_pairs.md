@@ -40,8 +40,8 @@ class Solution:
             j += 1
         
         cnt_i, cnt_j = left, mid + 1
-        while cnt_i <= mid:
-            if nums[cnt_i] <= nums[cnt_j]:
+        while cnt_i <= mid and cnt_j <= right:
+            if nums[cnt_i]/2 <= nums[cnt_j]:
                 cnt_i += 1
             else:
                 self.cnt += (mid - cnt_i + 1)

@@ -12,6 +12,8 @@
 * [环形指针](leetcode_cycle_linked_list2.md)
 
 * [几种dp可用的题](leetcode_coin_change.md)
+* [使用最小花费爬楼梯](leetcode_min_cost_climb_stairs.md)
+* [编辑距离](leetcode_edit_distance.md)
 * [不同路径](leetcode_diffirent_path.md)
 * [最长公共子序列](leetcode_longest_common_subsequence.md)
 * [三角形最小路径和](leetcode_triangle.md)
