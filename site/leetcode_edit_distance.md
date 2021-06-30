@@ -7,6 +7,7 @@
 BFS 和 DP
 
 * dp
+
 ```python
 class Solution:
     def edit_distance(self, words1: str, words2: str) -> int:
@@ -25,5 +26,4 @@ class Solution:
                     dp[i][j] = min(dp[i-1][j]+1, dp[i][j-1]+1, dp[i-1][j-1]+1)
 
         return dp[-1][-1]
-
 ```
