@@ -20,6 +20,7 @@
 * [最大子序和](leetcode_max_subarray.md)
 * [乘积最大子序和](leetcode_max_product_subarray.md)
 * [打家劫舍](leetcode_rob.md)
+* [最长递增子序列](leetcode_longest_increase_subsequence.md)
 
 * [子集](leetcode_zi_ji.md)
 * [多数元素](leetcode_majority_element.md)
@@ -42,3 +43,7 @@
 * [2的幂](leetcode_power_if_2.md)
 
 * [翻转对](leetcode_reverse_pairs.md)
+
+* [字符串中的第一个唯一字符](leetcode_first_unique_char.md)
+* [字符串转换整数](leetcode_string_to_int.md)
+* [翻转字符串中的单词](leetcode_reverse_words_in_string.md)
