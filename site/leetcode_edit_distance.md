@@ -27,3 +27,30 @@ class Solution:
 
         return dp[-1][-1]
 ```
+
+* 单向bfs
+
+```python
+class Solution:
+    def edit_distance(self, words1, words2):
+        visited, queue = [], [(words1, words2)]
+        step = 0
+        while queue:
+            for _ in range(len(queue)):
+                w1, w2 = queue.pop(0)
+                if (w1, w2) not in visited:
+                    if w1 == w2:
+                        return step
+                    
+                    visited.append((w1, w2))
+                    while w1 and w2 and w1[0] == w2[0]:
+                        w1, w2 = w1[1:], w2[1:]
+                    
+                    queue.append((w1[1:], w2))
+                    queue.append((w1, w2[1:])
+                    queue.append((w1[1:], w2[1:])
+
+            step += 1       
+
+        return step
+```
