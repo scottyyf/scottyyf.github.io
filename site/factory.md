@@ -1,4 +1,4 @@
-## 简单工厂模式
+## 简单工厂模式 动物叫
 
 定义：允许接口创建对象，但不会暴露对象的创建逻辑
 
@@ -36,7 +36,7 @@ if __name__ == '__main__':
 ```
 
 
-## 工厂方法模式
+## 工厂方法模式 脸书、领英上跟人简介
 
 ```
 product                     creator
@@ -109,4 +109,88 @@ class FaceBook(Profile):
 if __name__ == '__main__':
     ff = input('your input, facebook or linkedin?')
     profile = eval(ff)()
+```
+
+
+## 抽象工厂模式 pizza商店供货
+
+一个接口创建一系列对象
+
+一个pizza店，有美式和印式两种，每种又有蔬菜和肉两类，分别是美式（Mexican,Ham）印式(Delux,Chicken)。现在来了一个顾客要了肉类的所有pizza
+
+```
+factory(creator)---us_factory --- concrete_product1 --- product1
+|                    |
+|                    |
+|               concrete_product2 -- product2
+|
+india_factory ....
+```
+
+```python
+class PizzaFactory(ABC):
+    @abstractmethod
+    def create_veg_pizza(self):
+        pass
+
+    @abstractmethod
+    def create_non_veg_pizza(self):
+        pass
+
+
+class UsPizzaFactory(PizzaFactory):
+    def create_veg_pizza(self):
+        return MexicanPizza()
+
+    def create_non_veg_pizza(self):
+        reutrn HamPizza()
+
+
+class IndiaFactory(PizzaFactory):
+    def create_veg_pizza(self):
+        return DeluxPizza()
+
+    def create_non_veg_pizza(self):
+        return ChickenPizza()
+
+
+class VegPizza(ABC):
+    @abstractmethod
+    def prepare(self):
+        pass
+
+
+class NonVegPizza(ABC):
+    @abstractmethod
+    def serve(self, veg_pizza):
+        pass
+
+
+class MexicanPizza(VegPizza):
+    def prepare(self):
+        print(f'prepare {type(self).__name__}')
+
+
+class HamPizza(NonVegPizza):
+    def serve(self, veg_pizza):
+        print(f'{type(self).__name__} served with {type(veg_pizza).__name__} on')
+
+
+class DeluxPizza(Vegpizza):
+    def prepare(self):
+        print(f'prepare {type(self).__name__}')
+
+
+class ChickenPizza(NonVegPizza):
+    def serve(self, veg_pizza):
+        print(f'{type(self).__name__} served with {type(veg_pizza).__name__} on')
+
+
+class PizzaStore:
+    def make_pizza(self):
+        for factory in [UsFactory(), IndiaFactory()]:
+            veg = fatory.create_veg_pizza()
+            non_veg = factory.create_non_veg_pizza()
+            non_veg.prepare()
+            veg.serve(non_veg)
 ```
