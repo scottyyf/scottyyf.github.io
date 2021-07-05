@@ -1,4 +1,4 @@
-1. 通过\_\_new方法实现单列。new方法是在init方法前被自动调用
+1. 通过\_\_new\_\_方法实现单列。new方法是在init方法前被自动调用
 ```python
 class SingleTon:
     _instance = None
@@ -11,6 +11,7 @@ class SingleTon:
 
 2. 元类。元类是类的类，如type(int)返回的是type，这说明type是元类。实际上是通过int = type(name, base, dict)来实现类的初始化
 。这里可通过控制元类实现单例化。一般由元类来覆盖init和new
+
 ```python
 class MyInt(type):
     _instance = {}
@@ -30,6 +31,7 @@ a = Int().connect()  ## Int()实例化将调用MyInt的__call__函数
 ```
 
 3. 可在类定义的地方，直接实例化。其他地方调用时，直接使用这个实例化的对象、
+
 ```python
 class SingleTon:
     pass
