@@ -35,3 +35,26 @@ class Solution:
 
         return max_area
 ```
+
+dfs:
+```python
+class Solution:
+    def maxArea(self, height):
+        ret = []
+        self.dfs(height, left, right, ret)
+        return max(ret)
+
+    def dfs(self, height, left, right, ret):
+        if left >= right:
+            return
+
+        if height[left] < height[right]:
+            ret.append((right-left)*height[left])
+            left += 1
+
+        else:
+            ret.append((right-left)*height[right])
+            right -= 1
+
+        self.dfs(height, left, right, ret)
+```
