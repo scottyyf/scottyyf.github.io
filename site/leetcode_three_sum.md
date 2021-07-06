@@ -26,9 +26,18 @@ class Solution:
         return ret
 ```
 
-两重循环加hash map，hashmap中存储第三个值
+两重循环
 ```python
-TODO
+class Solution:
+    def threeSum(self, nums: list) -> List[List[int]]:
+        nums.sort()
+        ret = set()
+        for i in range(len(nums) - 2):
+            for j in range(i+1, len(nums)):
+                if (-nums[i]-nums[j]) in nums[j+1:]:
+                    ret.add((nums[i], nums[j], -nums[i]-nums[j]))
+
+        return list(ret)
 ```
 
 双指针法：快慢指针，左右两边，以及快指针先走k步的多种情况。

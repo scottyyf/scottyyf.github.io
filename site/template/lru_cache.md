@@ -1,8 +1,8 @@
 # Lru cache
 O(1)实现
 
-* get(key)
-* put(key, value)
+* get(key) 获取并放到首
+* put(key, value) 增加并放到首
 
 ```python
 class LinkedList:
@@ -68,6 +68,7 @@ class LruCache:
         node.next = None
 
     def add_to_head(self, node):
+        # 这里先添加node的指向，再改变已有node的指向
         node.prev = self.head
         node.next = self.head.next
 
