@@ -30,13 +30,12 @@ class Solution:
 ```python
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
-        prev = None
-        current = head
-        while current is not None:
-            next_node = current.next
+        prev, current = None, head
+        while current:
+            next = current.next
             current.next = prev
             prev = current
-            current = next_node
+            current = next
 
         return prev
 ```
@@ -51,11 +50,13 @@ class Solution:
 ```python
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
-        if head is None or head.next is None:
+        if not head or not head.next:
             return head
+
+        next_node = self.reverseList(head.next)
         
-        new_node = self.reverseList(head.next)
         head.next.next = head
         head.next = None
-        return new_node
+
+        return next_node
 ```

@@ -20,8 +20,8 @@ class Solution:
         if not head or not head.next:
             return head
 
-        ret = head.next
-        head.next = self.swapPairs(head.next.next)
-        ret.next = head
-        return ret
+        tmp = head.next
+        head.next.next = head
+        head.next = self.swapPairs(tmp.next)
+        return tmp
 ```
