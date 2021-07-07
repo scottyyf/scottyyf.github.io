@@ -10,16 +10,15 @@
 ```python
 class Solution:
     def detectCycle(self, head: ListNode) -> ListNode:
-        node_dict = {}
-        curr_node = head
-        while curr_node:
-            if curr_node not in node_dict:
-                node_dict[curr_node] = curr_node
-                curr_node = curr_node.next
+        node_list, current_node = [], head
+        while current_node:
+            if current_node not in node_list:
+                node_list.append(current_node)
+                current_node = current_node.next
                 continue
+            return current_node
 
-            return curr_node
-        return None
+        return
 ```
 
 2. 快慢指针。
@@ -27,6 +26,17 @@ class Solution:
 假设经过时间t，两者相遇
 * 快指针。那么他走的距离为2t
 * 慢指针。走的距离为t
+
+设直线有a个节点，环形中有b个节点。t时间相遇时，快指针走过的节点数为f，慢指针为s。则有
+
+* f = 2t = a + x
+* s = t = a + y
+* f - s = t = nb
+* f = 2nb, s = nb
+
+nb + a 为环形起始点，那么 当前s慢指针在走a步一定会和在出发点走a步的人遇到，通过这个找到起始点
+
+-----20210707
 
 有 2t - t =  nS环，即t=ns。也就是说这个时间慢指针走了ns的距离
 
@@ -68,19 +78,20 @@ class Solution:
 ```python
 class Solution:
     def detectCycle(self, head):
-        slow, fast = head, head
+        if not head:
+            return 
+
+        slow, fast, prev = head, head, head
         while True:
-            if not fast or not fast.next:
+            if not fast.next or not fast.next.next:
                 return None
 
-            slow = slow.next
-            fast = fast.next.next
+            slow, fast = slow.next, fast.next.next
             if slow == fast:
                 break
 
-        prev = head
-        while prev != slow:
-            prev, slow = prev.next, slow.next
+        while slow != prev:
+            slow, prev = slow.next, prev.next
 
         return prev
 ```

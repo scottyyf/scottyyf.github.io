@@ -37,16 +37,12 @@ class Solution:
             return False
 
         slow, fast = head, head.next
-        # 单节点环
-        if slow == fast:
-            return True
-        
         while slow != fast:
-            slow = slow.next
-            if not fast.next or not fast.next.next:
+            if not fast.next or fast.next.next:
                 return False
 
+            slow = slow.next
             fast = fast.next.next
-            if slow == fast:
-                return True
+
+        return True
 ```

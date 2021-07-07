@@ -10,6 +10,7 @@
 * [两两交换链表节点](leetcode_swap_nodes.md)
 * [环形指针](leetcode_cycle_linked_list.md)
 * [环形指针](leetcode_cycle_linked_list2.md)
+* [k个一组翻转](leetcode_reverse_nodes_in_k.md)
 
 * [几种dp可用的题](leetcode_coin_change.md)
 * [使用最小花费爬楼梯](leetcode_min_cost_climb_stairs.md)
