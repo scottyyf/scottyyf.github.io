@@ -5,6 +5,8 @@
 * [爬楼梯](leetcode_climb_stairs.md)
 * [两数之和](leetcode_two_sum.md)
 * [三数之和](leetcode_three_sum.md)
+* [有效的括号](leetcode_valid_kh.md)
+* [矩形的面积](leetcode_jx_area.md)
 
 * [反转链表](leetcode_reverse_linked_list.md)
 * [两两交换链表节点](leetcode_swap_nodes.md)

@@ -9,3 +9,8 @@
 #### 设计模式
 
 * [模式](site/module.md)
+
+#### 库函数类
+
+* [python库](module/python.md)
+* [go库](module/go.md)
