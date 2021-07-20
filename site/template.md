@@ -2,3 +2,5 @@
 * [三数之和](template/three_num_sum.md)
 * [并查集](template/union_find.md)
 * [排序](template/sort.md)
+* [两个有序数组的合并](template/union_two_sorted.md)
+* [树的遍历](tempate/tree_all_select.md)
