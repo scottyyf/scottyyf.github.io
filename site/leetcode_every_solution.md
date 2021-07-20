@@ -1,3 +1,5 @@
+## leetcode
+
 * [LRU缓存模拟](leetcode_lru_cache.md)
 
 * [移动零](leetcode_move_zeroes.md)
@@ -7,6 +9,9 @@
 * [三数之和](leetcode_three_sum.md)
 * [有效的括号](leetcode_valid_kh.md)
 * [矩形的面积](leetcode_jx_area.md)
+* [滑动窗口](leetcode_sliding_window.md)
+* [接雨水](leetcode_trapping_rain.md)
+* [字母异或词分组](leetcode_groupanagrams.md)
 
 * [反转链表](leetcode_reverse_linked_list.md)
 * [两两交换链表节点](leetcode_swap_nodes.md)
@@ -50,3 +55,8 @@
 * [字符串中的第一个唯一字符](leetcode_first_unique_char.md)
 * [字符串转换整数](leetcode_string_to_int.md)
 * [翻转字符串中的单词](leetcode_reverse_words_in_string.md)
+
+## geekbang exam
+* [餐馆个问题](geekbang/restaurants.md)
+* [数据流查询](geekbang/findtopquery.md)
+* [每日在线用户量](geekbang/daily.md)
