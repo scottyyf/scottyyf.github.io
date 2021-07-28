@@ -52,6 +52,7 @@
 
 * [1的个数](leetcode_num_of_1.md)
 * [2的幂](leetcode_power_if_2.md)
+* [只出现一次的数字](leetcode_single_num.md)
 
 * [翻转对](leetcode_reverse_pairs.md)
 
