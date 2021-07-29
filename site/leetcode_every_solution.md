@@ -31,6 +31,8 @@
 * [最大子序和](leetcode_max_subarray.md)
 * [乘积最大子序和](leetcode_max_product_subarray.md)
 * [打家劫舍](leetcode_rob.md)
+* [删除并获取点数](leetcode_delete_and_earn.md)
+* [买卖股票](leetcode_buy_stock.md)
 * [最长递增子序列](leetcode_longest_increase_subsequence.md)
 
 * [子集](leetcode_zi_ji.md)

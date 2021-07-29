@@ -8,3 +8,4 @@
 * [二分查找](template/binary_search.md)
 * [列表去重](template/remove_dup_from_list.md)
 * [旋转数组](template/rotate_array.md)
+* [重塑矩阵](template/reshape_matrix.md)
