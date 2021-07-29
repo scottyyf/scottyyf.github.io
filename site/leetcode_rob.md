@@ -28,7 +28,7 @@ class Solution:
 
 * 要求：除不能连续偷两家外，还得不允许偷手尾两家
 
-```pyython
+```python
 class Solution:
     def rob(self, nums) -> int:
         length = len(nums)
