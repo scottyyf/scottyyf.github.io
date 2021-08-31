@@ -26,7 +26,7 @@ class Solution:
         return prev
 ```
 
-迭代法：从前往后一一变更指针方向，为了获取下一个node，这里需要额外的空间存在这个值以便进行遍历
+迭代法：(画图过程中出现解法2021/08/06)从前往后一一变更指针方向，为了获取下一个node，这里需要额外的空间存在这个值以便进行遍历
 ```python
 class Solution:
     def reverseList(self, head: ListNode) -> ListNode:
@@ -53,10 +53,11 @@ class Solution:
         if not head or not head.next:
             return head
 
-        next_node = self.reverseList(head.next)
+        # 不需要在当前层做任何操作， 所以无
+        next_node = self.reverseList(head.next) # 这里是到下一层，没想出下一层要干嘛，所以就返回个node
         
-        head.next.next = head
-        head.next = None
+        head.next.next = head # 这里才是实际的reverse操作
+        head.next = None # 这个地方的none不会出问题的原因是，head.next = none 是从队尾开始复制的
 
-        return next_node
+        return next_node # 这里返回的是最后一个满足条件的值，也就是新的表头。理解递归的画图
 ```

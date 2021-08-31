@@ -56,5 +56,34 @@ class Solution:
         return max_len
 ```
 
+最终待模板的样子
 
+```python
+class Solution:
+    def test(self, s1, s2):
+        need, window = defaultdict(int), defaultdict(int)
+        left, right = 0, 0
+        for c in s2:
+            need[c] += 1
 
+        while right < len(s1):
+            # c 是加入窗口的字符
+            c = s1[right]
+            # 右移动窗口
+            right += 1
+
+            # 窗口数据更新
+            ...
+
+            # debug 位置
+            print(left, right)
+
+            # 判断左侧窗口是否要移动
+            while (window need shrink):
+                # d 是移出的字符
+                d = s1[left]
+                left += 1
+
+                # 窗口数据的更新
+                ...
+```

@@ -3,10 +3,12 @@
 * [LRU缓存模拟](leetcode_lru_cache.md)
 
 * [移动零](leetcode_move_zeroes.md)
+* [最长回文子串](leetcode_longest_palind.md)
 * [盛最多的水](leetcode_most_water.md)
 * [爬楼梯](leetcode_climb_stairs.md)
 * [两数之和](leetcode_two_sum.md)
 * [三数之和](leetcode_three_sum.md)
+* [最接近的三数之和](leetcode_3sum_closet.md)
 * [有效的括号](leetcode_valid_kh.md)
 * [矩形的面积](leetcode_jx_area.md)
 * [滑动窗口](leetcode_sliding_window.md)
@@ -20,6 +22,8 @@
 * [k个一组翻转](leetcode_reverse_nodes_in_k.md)
 
 * [二叉树](leetcode_binary_tree.md)
+* [合并二叉树](leetcode_merge_two_btree.md)
+* [填充每个节点的下一个右侧节点指正BFS](leetcode_next_pointer_for_tree.md)
 
 
 * [几种dp可用的题](leetcode_coin_change.md)
